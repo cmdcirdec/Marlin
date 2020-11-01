@@ -583,9 +583,9 @@
     // #define DEFAULT_Ki   1.08
     // #define DEFAULT_Kd 114.00
     // Sidewinder X1 bei 205°
-    #define DEFAULT_Kp 11.40
-    #define DEFAULT_Ki 0.70
-    #define DEFAULT_Kd 46.68
+    #define DEFAULT_Kp 16.80
+    #define DEFAULT_Ki 1.68
+    #define DEFAULT_Kd 41.97
   #endif
 #endif // PIDTEMP
 
@@ -627,6 +627,10 @@
   // #define DEFAULT_bedKp 10.00
   // #define DEFAULT_bedKi .023
   // #define DEFAULT_bedKd 305.4
+  // Sidewinder X1 bei 60°
+  #define DEFAULT_bedKp 44.70
+  #define DEFAULT_bedKi 7.58
+  #define DEFAULT_bedKd 175.77
 
   // Sidewinder X1 bei 55°
   #define DEFAULT_bedKp 37.68
@@ -818,7 +822,7 @@
 #define I_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
@@ -904,7 +908,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 430.57 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 454.23 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1346,11 +1350,11 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 305
-#define Y_BED_SIZE 305
+#define X_BED_SIZE 300
+#define Y_BED_SIZE 300
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -2
+#define X_MIN_POS 0
 #define Y_MIN_POS -5
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -1716,7 +1720,7 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M { (80*60), (80*60), (20*60) }
+#define HOMING_FEEDRATE_MM_M { (60*60), (60*60), (10*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1857,7 +1861,7 @@
   //#define NOZZLE_PARK_X_ONLY          // X move only is required to park
   //#define NOZZLE_PARK_Y_ONLY          // Y move only is required to park
   #define NOZZLE_PARK_Z_RAISE_MIN   2   // (mm) Always raise Z by at least this distance
-  #define NOZZLE_PARK_XY_FEEDRATE 100   // (mm/s) X and Y axes feedrate (also used for delta Z axis)
+  #define NOZZLE_PARK_XY_FEEDRATE 5   // (mm/s) X and Y axes feedrate (also used for delta Z axis)
   #define NOZZLE_PARK_Z_FEEDRATE    5   // (mm/s) Z axis feedrate (not used for delta printers)
 #endif
 
