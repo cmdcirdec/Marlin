@@ -575,17 +575,17 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  16.80,  22.20 }
-    #define DEFAULT_Ki_LIST {   1.68,   1.08 }
-    #define DEFAULT_Kd_LIST { 41.97, 114.00 }
+    #define DEFAULT_Kp_LIST {  12.07,  22.20 }
+    #define DEFAULT_Ki_LIST {   0.76,   1.08 }
+    #define DEFAULT_Kd_LIST { 47.94, 114.00 }
   #else
     // #define DEFAULT_Kp  22.20
     // #define DEFAULT_Ki   1.08
     // #define DEFAULT_Kd 114.00
     // Sidewinder X1 bei 205°
-    #define DEFAULT_Kp 16.80
-    #define DEFAULT_Ki 1.68
-    #define DEFAULT_Kd 41.97
+    #define DEFAULT_Kp 12.07
+    #define DEFAULT_Ki 0.76
+    #define DEFAULT_Kd 47.94
   #endif
 #endif // PIDTEMP
 
@@ -629,9 +629,9 @@
   // #define DEFAULT_bedKd 305.4
 
   // Sidewinder X1 bei 60°
-  #define DEFAULT_bedKp 44.70
-  #define DEFAULT_bedKi 7.58
-  #define DEFAULT_bedKd 175.77
+  #define DEFAULT_bedKp 32.16
+  #define DEFAULT_bedKi 5.03
+  #define DEFAULT_bedKd 136.99
 
   // Sidewinder X1 bei 55°
   #define DEFAULT_bedKp 37.68
