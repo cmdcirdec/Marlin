@@ -583,9 +583,9 @@
     // #define DEFAULT_Ki   1.08
     // #define DEFAULT_Kd 114.00
     // Sidewinder X1 bei 205°
-    #define DEFAULT_Kp 12.07
-    #define DEFAULT_Ki 0.76
-    #define DEFAULT_Kd 47.94
+    #define DEFAULT_Kp 11.40
+    #define DEFAULT_Ki 0.70
+    #define DEFAULT_Kd 46.68
   #endif
 #endif // PIDTEMP
 
@@ -628,10 +628,10 @@
   // #define DEFAULT_bedKi .023
   // #define DEFAULT_bedKd 305.4
 
-  // Sidewinder X1 bei 60°
-  #define DEFAULT_bedKp 32.16
-  #define DEFAULT_bedKi 5.03
-  #define DEFAULT_bedKd 136.99
+  // Sidewinder X1 bei 55°
+  #define DEFAULT_bedKp 37.68
+  #define DEFAULT_bedKi 6.76
+  #define DEFAULT_bedKd 139.92
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -904,7 +904,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 454.23 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 456.47 }
 
 /**
  * Default Max Feed Rate (mm/s)
