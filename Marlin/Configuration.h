@@ -599,17 +599,17 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  12.07,  22.20 }
-    #define DEFAULT_Ki_LIST {   0.76,   1.08 }
-    #define DEFAULT_Kd_LIST { 47.94, 114.00 }
+    #define DEFAULT_Kp_LIST {  17.40,  22.20 }
+    #define DEFAULT_Ki_LIST {   1.42,   1.08 }
+    #define DEFAULT_Kd_LIST {  53.46, 114.00 }
   #else
     // #define DEFAULT_Kp  22.20
     // #define DEFAULT_Ki   1.08
     // #define DEFAULT_Kd 114.00
     // Sidewinder X1 bei 205°
-    #define DEFAULT_Kp 11.40
-    #define DEFAULT_Ki 0.70
-    #define DEFAULT_Kd 46.68
+    #define DEFAULT_Kp 17.40
+    #define DEFAULT_Ki 1.42
+    #define DEFAULT_Kd 53.46
   #endif
 #endif // PIDTEMP
 
@@ -653,9 +653,9 @@
   // #define DEFAULT_bedKd 305.4
 
   // Sidewinder X1 bei 55°
-  #define DEFAULT_bedKp 37.68
-  #define DEFAULT_bedKi 6.76
-  #define DEFAULT_bedKd 139.92
+  #define DEFAULT_bedKp 30.48
+  #define DEFAULT_bedKi 3.51
+  #define DEFAULT_bedKd 176.38
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -928,7 +928,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 430.57 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 403.32 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -2096,7 +2096,7 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-//#define SDSUPPORT
+#define SDSUPPORT
 
 /**
  * SD CARD: ENABLE CRC
